@@ -1,0 +1,75 @@
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Miltonian+Tattoo&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+    <div id="confetti">
+    </div>
+    <div class="deco">
+        <img style="left:0;top:-30px" src="deco.png"/>
+        <img style="right:0;top:-20px; transform:rotate(90deg)" src="deco.png"/>
+        <img style="left:-30px; height:100%;top:30%" class="party" src="party1.png"/>
+        <img style="right:-90px; height:100%;top:30%" class="party" src="party2.png"/>
+        <div class="dance" style="bottom:-100%;position:absolute;display:flex;width:100%">
+
+
+            <img src="dance1-unscreen.gif" alt="" autoplay >
+            <img src="dance1-unscreen.gif" class="dance2" alt="" autoplay >
+        </div>
+
+
+    </div>
+    <!-- <div id="mug-container">
+    </div>   -->
+      
+    <div class="text1" style="z-index:30">
+        <h1 class="" style="font-size: 4rem;font-weight:800">Hall Day</h1>
+        <h3 class="" style="font-size: 1.2rem;font-weight:800">Azad Hall of Residence</h3>
+        <p class="" style="
+        color: gold;
+    ">We warmly welcome you to join us...</p>
+    <p class="" style="font-size: 1.2rem;font-weight: 800;">27th March, Wednesday | 7:30PM</p>
+    
+    </div>
+    <div class="container">
+    <div id="tap-container">
+        <div id="tap"></div>
+        <div id="handle"></div>
+        <div id="pour"></div>
+    </div>
+    <div class="glass">
+        <!--First wine glass -->
+        <div class="body">
+               <div id="beer"></div>
+            <!-- <div class="wine"></div> -->
+        </div>
+        <div class="middle"></div>
+        <div class="base"></div>
+    </div>
+   
+<div class="text" style="z-index:30">
+<h1 class="" style="font-size:3rem; font-weight:800">E-206</h1>
+<p class="">Smarak</p>
+<p class="">Amitabh</p>
+<p class="">Shubhendu</p>
+
+</div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/3.3.0/tsparticles.bundle.min.js" integrity="sha512-peqlZu/SRKzh/wys/VOVL+F7OVG+boi1QmP++PbeTzmYe6kVu1UocLn6rxbB0DMvgbXGfXTp24wC3kFxKu/CQQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="index.js"></script>
+<script>
+    function showAlert() {
+        alert('Tap the handle to pour!');
+      };
+    
+    setTimeout(showAlert,3000);
+</script>
+</body>
+</html>

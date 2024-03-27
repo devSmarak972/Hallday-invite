@@ -1,0 +1,426 @@
+
+
+body{
+  background:#1a1a1b;
+  /* background-image: url("party.jpg"); */
+  color:#FFF;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin:0;
+  /* font-family: 'Raleway', sans-serif; */
+  text-align:center;
+  letter-spacing:0.08em;
+    font-family: "Miltonian Tattoo", serif;
+    font-weight: 400;
+    font-style: normal;
+  
+  
+  }
+
+b{
+  font-size:28px;
+  color:#FFF;
+}
+.glass{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+.deco{
+    width:100%;
+    height:100%;
+    position: absolute;
+}
+
+.deco img{
+    position:absolute;
+    display: block;
+}
+.dance{
+    justify-content: space-between;
+}
+.dance img{
+    position:relative;
+    display: block;
+    width: 50%;
+    bottom: 0;
+}
+.container{
+  width:80%;
+  height:500px;
+  top:200px;
+  margin:15px auto;
+  background:transparent;
+  overflow:inherit; 
+  position:relative;
+  margin:auto;
+  display:flex;
+  justify-content: center;
+  /* box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); */
+}
+.text1{
+    margin-bottom: 100px;
+}
+.text{
+  position:absolute;
+  /*left:50%;*/
+  position: absolute;
+  /* left: 50%; */
+  top: 6%;
+  /* transform: translate(-50%, -50%); */
+  text-align: center;
+  color: #484849;
+  /* font-size: 64px; */
+  /* font-weight: 900;
+  /* font-size:64px; */
+  /* font-weight:900; */
+  }
+.liquid.empty{
+    width:120%;
+    height:10px;
+    position:absolute;
+    top:-2%;
+    left:-10%;
+    background:#FFF;
+    border-radius:10%;
+  animation: liquid 5s infinite;
+    }
+    @media only screen and (max-width: 650px) {
+        /* Add your CSS rules for screens with a maximum width of 650 pixels or less here */
+        /* For example: */
+        .party {
+          display: none !important; /* Adjust font size for smaller screens */
+        }
+        /* .dancer2{
+            display:none;
+        } */
+        /* You can add more CSS rules specific to smaller screens here */
+      }
+.blobs.empty{
+  filter:url('#goo');
+  width:100%;
+  height:100%;
+  position:relative;
+  
+  .blob{
+    width:30px;
+    height:30px;
+    margin:0 5px 0px 0;
+    background:#FFF;
+    border-radius:50%;
+    position:absolute;
+    top:0;
+    @include leftPos(9);
+    animation: drip_one 5s infinite;
+      
+      &:nth-of-type(4n-7){
+        width:65px;
+        animation: drip_four 5s infinite;
+        } 
+      &:nth-of-type(3n-2){
+        width:26px;
+        }
+      &:nth-of-type(2){
+        width:22px;
+      
+      }
+      &:nth-of-type(8){
+        animation: drip_five 5s infinite;
+        }
+      &:nth-of-type(4n+2){
+        height:56px;
+        animation: drip_two 5s infinite;
+        }
+      &:nth-of-type(6n-2){
+        height:42px;
+      animation: drip_three 5s infinite;
+        }
+    }
+
+  }
+
+@keyframes drip_one{
+  from{top:0;}
+  to{top:103%;}
+  }  
+@keyframes drip_two{
+  from{top:0;}
+  to{top:104%;}
+  }
+@keyframes drip_three{
+  from{top:0;height:52px;}
+  to{top:102%;height:132px;}
+  } 
+@keyframes drip_four{
+  from{top:0;width:65px;height:30px;}
+  to{top:102%;width:75px;height:45px;}
+  } 
+@keyframes drip_five{
+  from{top:0;height:30px;}
+  to{top:102%;height:72px;}
+  } 
+@keyframes liquid{
+  from{height:15px;}
+  to{height:109%;}
+  }
+
+
+
+  html {
+	font-size:16px;
+}
+
+#tap-container {
+    position: absolute;
+    top: -50%;
+    /* left: 90px; */
+    transform: translateX(-50%);
+}
+#tap {
+  width:120px;
+  background: #ddd;
+  height:35px;
+  margin:140px 0 0 0;
+  position:relative;
+  border-top-left-radius:5px;
+  border-bottom-left-radius:5px;
+}
+#tap:after {
+  content:"";
+  display:block;
+  position:absolute;
+  border-top: 70px solid #ddd;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+  border-radius:0 0 40px 40px;
+	height: 0;
+	width: 20px;
+	top:10px;
+  right:10px;
+  transform:rotate(-20deg);
+  z-index:2;
+}
+#tap:before {
+	content:"";
+  display:block;
+  position:absolute;
+  width:70px;
+  height:60px;
+  background:grey;
+  left:-20px;
+  top:-15px;
+  border-radius: 0px 20px 20px 0px;
+}
+#handle {
+  border-top: 100px solid rgb(219, 171, 171);
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+  width:20px;
+  position:absolute;
+  top:30px;
+  left:80px;
+  border-radius: 10px 10px 0 0;
+  z-index:3;
+}
+#handle:before {
+	content:"";
+  display:block;
+  width:30px;
+  height:30px;
+  background:lightgrey;
+  position:absolute;
+  bottom:-20px;
+  left:-5px;
+  border-radius:20px 20px 10px 10px
+}
+
+#handle:hover {
+  transform:rotate(6deg);
+  transform-origin: center bottom;
+}
+#handle:hover:before {
+  transform:rotate(0deg);
+}
+#pour {
+  position:absolute;
+  left:92px;
+  top:210px;
+  width:16px;
+  height:0px;
+  z-index:1;
+  /* background:rgb(250 91 57); */
+  background:rgb(250 91 57);
+  transition:0s;
+}
+#pour.pouring {
+  height:322px;
+  transition:800ms ease;
+}
+
+
+
+#mug-container {
+  position:absolute;
+  top:180px;
+}
+#mug {
+	margin:60px 0  0 40px;
+  border:20px solid #eee;
+  border-bottom-width:30px;
+  width:120px;
+  height:200px;
+  border-top:none;
+  border-radius: 0 0 10px 10px;
+  position:relative;	
+}
+#mug:before {
+	position:absolute;
+  content:"";
+  display:block;
+  bottom:-40px;
+  height:30px;
+  width:180px;
+  left:-30px;
+  background:#eee;
+}
+#mug:after {
+  position:absolute;
+  content:"";
+  display:block;
+  right:-80px;
+  top:30px;
+  width:40px;
+  height:110px;
+  border:25px solid #eee;
+  border-left:none;
+  border-radius:0 50px 150px 0;
+} 
+#beer {
+
+  width:100%;
+  height:0%;
+  max-height:100%;
+  background:
+    linear-gradient(
+       rgba(255,255,255,1) 0%,
+       rgb(245, 154, 133) 35%,
+      rgb(245, 113, 84) 43%,
+      rgb(245, 96, 63) 44%,
+      rgba(255, 87, 51 ,1) 100%    
+    );
+  background-repeat: repeat;
+  background-size:100% 200%;
+  position:absolute;
+  bottom:0;
+  left:0;
+}
+@keyframes beerFill {
+  5% {
+    height:0%;
+  }
+  10%{
+    height:8%;
+  }
+  100% {
+    height:98%;
+  }
+}
+#beer.fill {
+   animation-name:beerFill;
+  animation-duration:10s;
+  animation-fill-mode:forwards;
+  background-position:0% 70%;
+}
+h1 {
+	font-size:3rem;
+  text-align:center;
+	line-height:1em;
+	margin-bottom:10px;
+	margin-top:10px;
+}
+#percent-filled {
+  text-align:center;
+}
+#result {
+  text-align:center;
+}
+.helper.tap {
+	text-align:center;
+	margin-bottom:0;
+}
+.helper.mug {
+  margin-left:30px;
+  width:180px;
+  text-align:center;
+}
+
+body{
+
+  justify-content: center;
+  padding-top: 50px;
+  
+}
+
+
+.body{
+    overflow: hidden;
+    background: rgba(180, 180, 180, 0.3);
+    width: 200px;
+    height: 300px;
+    border-radius: 53% 47% 49% 51% / 0% 0% 100% 100%;
+    border: 1px solid transparent;
+    filter: blur(0px);
+    box-shadow: inset 0 1px 0px #444444, inset 0 2px 0 white,
+        inset 0 -6px 3px #444444;
+}
+.wine{
+    background: linear-gradient(to bottom, transparent,
+        transparent, transparent, #b86b77, #b86b77, #b86b77);
+    width: 200px;
+    height: 300px;
+    border-radius: 53% 47% 49% 51% / 0% 0% 100% 100%;
+}
+
+.middle{
+    background: rgba(180, 180, 180, 0.3);
+    width: 20px;
+    height: 250px;
+    border-radius: 0 0 5px 5px;
+    border: 1px solid transparent;
+    filter: blur(0px);
+    box-shadow: inset 0 1px 0px #444444, inset 0 2px 0 white, 
+        inset 0 -6px 3px #444444;
+    position: relative;
+    left: 90px;
+    bottom: 5px;
+}
+
+.base{
+    background: rgba(180, 180, 180, 0.3);
+    width: 130px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid #777;
+    filter: blur(0px);
+    filter: drop-shadow(8px 8px 8px black);
+    position: relative;
+    left: 30px;
+    bottom: 10px;
+}
+
+#confetti{
+	background: transparent;
+	height: 100%;
+	left: 0px;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	z-index: -1;
+    visibility:hidden;
+}
+
+
